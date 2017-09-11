@@ -1,0 +1,75 @@
+TESTS
+
+TEST DATA
+Account,Date,Payee,Category,Outflow,Inflow
+JT,1/1/2017,Loan,Loan,$0.00,$5000.00
+JT,1/19/2017,Target,Fun,$23.00,$0.00
+JT,1/20/2017,Target,Work,$63.00,$0.00
+JT,1/11/2017,Target,School,$33.00,$0.00
+JT,2/23/2017,Target,Fun,$25.00,$0.00
+John,1/1/2017,Loan,Loan,$0.00,$5000.00
+John,3/4/2005,Target,Work,$29.00,$0.00
+John,3/4/2005,Target,School,$234.00,$0.00
+John,3/8/2005,Target,Fun,$246.00,$0.00
+John,3/4/2005,Target,Work,$278.00,$0.00
+Thomas,1/1/2017,Loan,Loan,$0.00,$5000.00
+Thomas,3/4/2005,Target,School,$97.00,$0.00
+Thomas,5/4/2005,Target,Fun,$33.00,$0.00
+Thomas,3/4/2005,TargetWork,$13.00,$0.00
+Thomas,3/4/2005,Target,School,$34.00,$0.00
+
+LOGINS
+ID,PSWD
+admin,admin
+
+
+
+
+
+LOGIN works...
+	Given pre determined key value pair(login ID and password)
+	Want to make sure it is accepted as a true value
+	If true value, does it set session ID?
+
+~Need to turn it into a function rather than just floating around in the POST method
+
+Pass the inputted values into the function
+The function checks to see if the two data points are equal to the ones we want them to be.
+If so, returns true. Else returns false.
+
+__________________________________________
+SET THE SESSION ID
+
+
+
+__________________________________________
+LOGOUT
+	Sets Session ID to Nill
+
+__________________________________________
+SHOW CSV...
+	makes sure you have correct privilidges to view reports
+	Checks to see if a returned string from CSV is not null
+
+Takes the test data and outputs it into the command line or even just onto a blank html page.
+From there, try to see if it can print out each one individually
+___________________________________________
+Convert for CSV...
+	Takes 6 given inputs and puts them into a comma separated format so that it can easily be read back
+
+Grabs the six inputs from the webpage when submit is clicked. Changes the outputs to be uniform with the csv file...
+	Account - first letter capitalized
+	Date - M/D/YYYY
+	Payee - whatever
+	Category - first letter capitalized
+	Outflow - $##.##
+	Inflow - $##.##
+Then makes sure that everything is seperated by a comma
+Account,Date,Payee,Category,Outflow,Inflow
+___________________________________________
+ADD to CSV...
+	Takes the given strings and puts it into a text or csv file.
+
+Adds a string to a file for testing.
+
+___________________________________________
