@@ -29,33 +29,42 @@ TESTS
 LOGIN works...
 	Given pre determined key value pair(login ID and password)
 	Want to make sure it is accepted as a true value
-	If true value, does it set session ID?
 
-~Need to turn it into a function rather than just floating around in the POST method
 
-Pass the inputted values into the function
-The function checks to see if the two data points are equal to the ones we want them to be.
-If so, returns true. Else returns false.
+~ If I pass a checkLogin function two string values...
+	If the two values match the set of predetermined criteria, then I should return true.
+	If the two values do not match the set of predetermined criteria then I should return false.
 
 __________________________________________
 SET THE SESSION ID
 
+~ If i set the session ID equal to the name of the account
+	The session ID should equal the name of the account
 
 
 __________________________________________
 LOGOUT
-	Sets Session ID to Nill
+~If I have a logout function and I pass it a boolean of true,
+	It takes a session ID that was previously an account name and sets it to null.
 
 __________________________________________
 SHOW CSV...
-	makes sure you have correct privilidges to view reports
-	Checks to see if a returned string from CSV is not null
-
-Takes the test data and outputs it into the command line or even just onto a blank html page.
-From there, try to see if it can print out each one individually
+~If I have a string of data, and pass it to the show CSV function
+	Then I should have that the string printed out.
 ___________________________________________
 Convert for CSV...
-	Takes 6 given inputs and puts them into a comma separated format so that it can easily be read back
+
+~If i have a standardWord function and I pass it a string,
+	Then I should get back a string with the first character capitalized.
+(Account, Payee, Category)
+
+~if i have a standardNum function and I pass it an integer,
+	I should get back a float from that number to two decimal places.
+(Inflow, Outflow)
+
+~if I have a combineString function and I pass it 6 variables,
+	I should have one string returned with everything seperated by a comma.
+
 
 Grabs the six inputs from the webpage when submit is clicked. Changes the outputs to be uniform with the csv file...
 	Account - first letter capitalized
@@ -68,8 +77,9 @@ TESTS
 Account,Date,Payee,Category,Outflow,Inflow
 ___________________________________________
 ADD to CSV...
+
 	Takes the given strings and puts it into a text or csv file.
+If i have a addToCSV function and I pass it a string,
+	That string will be added to a file
 
-Adds a string to a file for testing.
-
-___________________________________________
+
